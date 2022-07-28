@@ -118,15 +118,24 @@ namespace XwRemote.Servers
                 | ((int)PerformanceFlags.TS_PERF_DISABLE_MENUANIMATIONS)
                 //| ((int)PerformanceFlags.TS_PERF_ENABLE_FONT_SMOOTHING)
                 | ((int)PerformanceFlags.TS_PERF_ENABLE_DESKTOP_COMPOSITION)
-                | ((server.Themes) ? 0 : ((int)PerformanceFlags.TS_PERF_DISABLE_THEMING))
-                ;
+                | ((server.Themes) ? 0 : ((int)PerformanceFlags.TS_PERF_DISABLE_THEMING));
 
             //SIZE
             rdpControl.AutoSize = true;
             rdpControl.FullScreen = false;
             rdpControl.AdvancedSettings7.SmartSizing = true;
-            rdpControl.DesktopWidth = (server.Width > 0) ? server.Width : Width;
-            rdpControl.DesktopHeight = (server.Height > 0) ? server.Height: Height;
+
+            Rectangle screen = Screen.FromControl(this).Bounds;
+            if (server.Width == 0)
+            {
+                rdpControl.DesktopWidth = screen.Width;
+                rdpControl.DesktopHeight = screen.Height;
+            }
+            else
+            {
+                rdpControl.DesktopWidth = (server.Width > 0) ? server.Width : Width;
+                rdpControl.DesktopHeight = (server.Height > 0) ? server.Height: Height;
+            }
             
             rdpControl.OnEnterFullScreenMode += RdpControl_OnEnterFullScreenMode;
             rdpControl.OnLeaveFullScreenMode += RdpControl_OnLeaveFullScreenMode;
@@ -134,7 +143,6 @@ namespace XwRemote.Servers
 
             if (server.Width == -2)
             {
-                Rectangle screen = Screen.FromControl(this).Bounds;
                 rdpControl.DesktopWidth = screen.Width;
                 rdpControl.DesktopHeight = screen.Height;                
                 FullScreen();
@@ -147,8 +155,7 @@ namespace XwRemote.Servers
         private void RdpControl_OnEnterFullScreenMode(object sender, EventArgs e)
         {
             labelMessage.Visible = true;
-            Rectangle screen = Screen.FromControl(this).Bounds;
-            rdpControl.Reconnect((uint)screen.Width, (uint)screen.Height);
+            rdpControl.FullScreen = true;
         }
 
         //*************************************************************************************************************
@@ -156,9 +163,6 @@ namespace XwRemote.Servers
         {
             labelMessage.Visible = false;
             rdpControl.FullScreen = false;
-            int X = (server.Width > 0) ? server.Width : Width;
-            int Y = (server.Height > 0) ? server.Height : Height;
-            rdpControl.Reconnect((uint)X, (uint)Y);
         }
 
         //*************************************************************************************************************
