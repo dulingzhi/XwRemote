@@ -60,13 +60,13 @@
             this.dialogHeader1.Gradient2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
             this.dialogHeader1.Gradient3 = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(209)))), ((int)(((byte)(255)))));
             this.dialogHeader1.Gradient4 = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
-            this.dialogHeader1.HeaderDescription = "Try and find hosts on the network that have open ports so that you can connect to" +
-    " them";
+            this.dialogHeader1.HeaderDescription = "尝试发现网络中可以连接的主机";
             this.dialogHeader1.HeaderImage = global::XwRemote.Properties.Resources.magnifier;
-            this.dialogHeader1.HeaderTitle = "Network scan";
+            this.dialogHeader1.HeaderTitle = "网络扫描";
             this.dialogHeader1.Location = new System.Drawing.Point(0, 0);
+            this.dialogHeader1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dialogHeader1.Name = "dialogHeader1";
-            this.dialogHeader1.Size = new System.Drawing.Size(1007, 50);
+            this.dialogHeader1.Size = new System.Drawing.Size(1510, 69);
             this.dialogHeader1.TabIndex = 1;
             // 
             // ipAddressControlFrom
@@ -76,11 +76,12 @@
             this.ipAddressControlFrom.BackColor = System.Drawing.SystemColors.Window;
             this.ipAddressControlFrom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ipAddressControlFrom.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ipAddressControlFrom.Location = new System.Drawing.Point(95, 59);
-            this.ipAddressControlFrom.MinimumSize = new System.Drawing.Size(87, 20);
+            this.ipAddressControlFrom.Location = new System.Drawing.Point(142, 82);
+            this.ipAddressControlFrom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ipAddressControlFrom.MinimumSize = new System.Drawing.Size(141, 28);
             this.ipAddressControlFrom.Name = "ipAddressControlFrom";
             this.ipAddressControlFrom.ReadOnly = false;
-            this.ipAddressControlFrom.Size = new System.Drawing.Size(87, 20);
+            this.ipAddressControlFrom.Size = new System.Drawing.Size(212, 28);
             this.ipAddressControlFrom.TabIndex = 2;
             this.ipAddressControlFrom.Text = "...";
             this.ipAddressControlFrom.TextChanged += new System.EventHandler(this.ipAddressControlFrom_TextChanged);
@@ -92,11 +93,12 @@
             this.ipAddressControlTo.BackColor = System.Drawing.SystemColors.Window;
             this.ipAddressControlTo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ipAddressControlTo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ipAddressControlTo.Location = new System.Drawing.Point(210, 59);
-            this.ipAddressControlTo.MinimumSize = new System.Drawing.Size(87, 20);
+            this.ipAddressControlTo.Location = new System.Drawing.Point(315, 82);
+            this.ipAddressControlTo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ipAddressControlTo.MinimumSize = new System.Drawing.Size(141, 28);
             this.ipAddressControlTo.Name = "ipAddressControlTo";
             this.ipAddressControlTo.ReadOnly = false;
-            this.ipAddressControlTo.Size = new System.Drawing.Size(87, 20);
+            this.ipAddressControlTo.Size = new System.Drawing.Size(212, 28);
             this.ipAddressControlTo.TabIndex = 3;
             this.ipAddressControlTo.Text = "...";
             this.ipAddressControlTo.TextChanged += new System.EventHandler(this.ipAddressControlTo_TextChanged);
@@ -104,29 +106,32 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 62);
+            this.label1.Location = new System.Drawing.Point(12, 86);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.Size = new System.Drawing.Size(71, 18);
             this.label1.TabIndex = 4;
-            this.label1.Text = "IP range from";
+            this.label1.Text = "IP 起始";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(188, 62);
+            this.label2.Location = new System.Drawing.Point(282, 86);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 13);
+            this.label2.Size = new System.Drawing.Size(26, 18);
             this.label2.TabIndex = 5;
-            this.label2.Text = "to";
+            this.label2.Text = "至";
             // 
             // buttonStartNoARP
             // 
             this.buttonStartNoARP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonStartNoARP.Location = new System.Drawing.Point(719, 85);
+            this.buttonStartNoARP.Location = new System.Drawing.Point(1078, 118);
+            this.buttonStartNoARP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonStartNoARP.Name = "buttonStartNoARP";
-            this.buttonStartNoARP.Size = new System.Drawing.Size(276, 22);
+            this.buttonStartNoARP.Size = new System.Drawing.Size(414, 30);
             this.buttonStartNoARP.TabIndex = 6;
-            this.buttonStartNoARP.Text = "Start";
+            this.buttonStartNoARP.Text = "开始";
             this.buttonStartNoARP.UseVisualStyleBackColor = true;
             this.buttonStartNoARP.Click += new System.EventHandler(this.buttonStart_NoARP_Click);
             // 
@@ -136,9 +141,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewHosts.HideSelection = false;
-            this.listViewHosts.Location = new System.Drawing.Point(12, 129);
+            this.listViewHosts.Location = new System.Drawing.Point(18, 179);
+            this.listViewHosts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listViewHosts.Name = "listViewHosts";
-            this.listViewHosts.Size = new System.Drawing.Size(983, 556);
+            this.listViewHosts.Size = new System.Drawing.Size(1472, 768);
             this.listViewHosts.TabIndex = 7;
             this.listViewHosts.UseCompatibleStateImageBehavior = false;
             this.listViewHosts.View = System.Windows.Forms.View.Details;
@@ -147,26 +153,29 @@
             // 
             this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar.Location = new System.Drawing.Point(12, 112);
+            this.progressBar.Location = new System.Drawing.Point(18, 155);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(983, 11);
+            this.progressBar.Size = new System.Drawing.Size(1474, 15);
             this.progressBar.TabIndex = 8;
             // 
             // textTcpPorts
             // 
-            this.textTcpPorts.Location = new System.Drawing.Point(511, 59);
+            this.textTcpPorts.Location = new System.Drawing.Point(766, 82);
+            this.textTcpPorts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textTcpPorts.Name = "textTcpPorts";
-            this.textTcpPorts.Size = new System.Drawing.Size(202, 20);
+            this.textTcpPorts.Size = new System.Drawing.Size(301, 28);
             this.textTcpPorts.TabIndex = 10;
             // 
             // checkTcpPorts
             // 
             this.checkTcpPorts.AutoSize = true;
-            this.checkTcpPorts.Location = new System.Drawing.Point(421, 61);
+            this.checkTcpPorts.Location = new System.Drawing.Point(632, 84);
+            this.checkTcpPorts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkTcpPorts.Name = "checkTcpPorts";
-            this.checkTcpPorts.Size = new System.Drawing.Size(84, 17);
+            this.checkTcpPorts.Size = new System.Drawing.Size(124, 22);
             this.checkTcpPorts.TabIndex = 9;
-            this.checkTcpPorts.Text = "Check Ports";
+            this.checkTcpPorts.Text = "检查端口号";
             this.checkTcpPorts.UseVisualStyleBackColor = true;
             this.checkTcpPorts.CheckedChanged += new System.EventHandler(this.checkTcpPorts_CheckedChanged);
             // 
@@ -179,32 +188,35 @@
             this.checkBoxHideDead.AutoSize = true;
             this.checkBoxHideDead.Checked = true;
             this.checkBoxHideDead.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxHideDead.Location = new System.Drawing.Point(210, 87);
+            this.checkBoxHideDead.Location = new System.Drawing.Point(315, 120);
+            this.checkBoxHideDead.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxHideDead.Name = "checkBoxHideDead";
-            this.checkBoxHideDead.Size = new System.Drawing.Size(93, 17);
+            this.checkBoxHideDead.Size = new System.Drawing.Size(133, 22);
             this.checkBoxHideDead.TabIndex = 11;
-            this.checkBoxHideDead.Text = "Hide dead IPs";
+            this.checkBoxHideDead.Text = "隐藏无效 IP";
             this.checkBoxHideDead.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(418, 88);
+            this.label3.Location = new System.Drawing.Point(627, 122);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 13);
+            this.label3.Size = new System.Drawing.Size(89, 18);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Test Timeout (ms)";
+            this.label3.Text = "超时 (ms)";
             // 
             // numericTestTimeout
             // 
-            this.numericTestTimeout.Location = new System.Drawing.Point(511, 86);
+            this.numericTestTimeout.Location = new System.Drawing.Point(766, 119);
+            this.numericTestTimeout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericTestTimeout.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.numericTestTimeout.Name = "numericTestTimeout";
-            this.numericTestTimeout.Size = new System.Drawing.Size(202, 20);
+            this.numericTestTimeout.Size = new System.Drawing.Size(303, 28);
             this.numericTestTimeout.TabIndex = 13;
             this.numericTestTimeout.Value = new decimal(new int[] {
             100,
@@ -214,9 +226,10 @@
             // 
             // numericMaxThreads
             // 
-            this.numericMaxThreads.Location = new System.Drawing.Point(95, 86);
+            this.numericMaxThreads.Location = new System.Drawing.Point(142, 119);
+            this.numericMaxThreads.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericMaxThreads.Name = "numericMaxThreads";
-            this.numericMaxThreads.Size = new System.Drawing.Size(87, 20);
+            this.numericMaxThreads.Size = new System.Drawing.Size(130, 28);
             this.numericMaxThreads.TabIndex = 15;
             this.numericMaxThreads.Value = new decimal(new int[] {
             10,
@@ -227,22 +240,24 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 88);
+            this.label4.Location = new System.Drawing.Point(12, 122);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 13);
+            this.label4.Size = new System.Drawing.Size(98, 18);
             this.label4.TabIndex = 14;
-            this.label4.Text = "Max Threads";
+            this.label4.Text = "最大线程数";
             // 
             // checkDNS
             // 
             this.checkDNS.AutoSize = true;
             this.checkDNS.Checked = true;
             this.checkDNS.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkDNS.Location = new System.Drawing.Point(311, 62);
+            this.checkDNS.Location = new System.Drawing.Point(466, 86);
+            this.checkDNS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkDNS.Name = "checkDNS";
-            this.checkDNS.Size = new System.Drawing.Size(83, 17);
+            this.checkDNS.Size = new System.Drawing.Size(106, 22);
             this.checkDNS.TabIndex = 16;
-            this.checkDNS.Text = "Check DNS";
+            this.checkDNS.Text = "检查 DNS";
             this.checkDNS.UseVisualStyleBackColor = true;
             // 
             // checkNetBios
@@ -250,29 +265,31 @@
             this.checkNetBios.AutoSize = true;
             this.checkNetBios.Checked = true;
             this.checkNetBios.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkNetBios.Location = new System.Drawing.Point(311, 87);
+            this.checkNetBios.Location = new System.Drawing.Point(466, 120);
+            this.checkNetBios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkNetBios.Name = "checkNetBios";
-            this.checkNetBios.Size = new System.Drawing.Size(96, 17);
+            this.checkNetBios.Size = new System.Drawing.Size(142, 22);
             this.checkNetBios.TabIndex = 17;
-            this.checkNetBios.Text = "Check Netbios";
+            this.checkNetBios.Text = "检查 NetBIOS";
             this.checkNetBios.UseVisualStyleBackColor = true;
             // 
             // buttonStartARP
             // 
             this.buttonStartARP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonStartARP.Location = new System.Drawing.Point(719, 58);
+            this.buttonStartARP.Location = new System.Drawing.Point(1078, 80);
+            this.buttonStartARP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonStartARP.Name = "buttonStartARP";
-            this.buttonStartARP.Size = new System.Drawing.Size(276, 22);
+            this.buttonStartARP.Size = new System.Drawing.Size(414, 30);
             this.buttonStartARP.TabIndex = 18;
-            this.buttonStartARP.Text = "Start";
+            this.buttonStartARP.Text = "开始";
             this.buttonStartARP.UseVisualStyleBackColor = true;
             this.buttonStartARP.Click += new System.EventHandler(this.buttonStart_ARP_Click);
             // 
             // Scanner
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1007, 697);
+            this.ClientSize = new System.Drawing.Size(1510, 965);
             this.Controls.Add(this.buttonStartARP);
             this.Controls.Add(this.checkNetBios);
             this.Controls.Add(this.checkDNS);
@@ -292,9 +309,10 @@
             this.Controls.Add(this.ipAddressControlFrom);
             this.Controls.Add(this.dialogHeader1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Scanner";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "XwRemote Scanner";
+            this.Text = "XwRemote 网络扫描";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Scanner_FormClosing);
             this.Load += new System.EventHandler(this.Scanner_Load);
             this.Resize += new System.EventHandler(this.Scanner_Resize);
