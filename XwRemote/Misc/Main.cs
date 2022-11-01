@@ -149,7 +149,12 @@ namespace XwRemote
         {
             ServerManager serverManager = new ServerManager(this);
             if (serverManager.ShowDialog(this) == DialogResult.OK)
-                ConnectToServer(serverManager.ConnectToThisServer);
+            {
+                foreach (var server in serverManager.ConnectToThisServer)
+                {
+                    ConnectToServer(server);
+                }
+            }
             LoadFavorites();
         }
 

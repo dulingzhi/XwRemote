@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.treeServers = new System.Windows.Forms.TreeView();
+            this.treeServers = new XwRemote.Misc.GTreeView();
             this.tabStrip1 = new Messir.Windows.Forms.TabStrip();
             this.FilterGrouped = new Messir.Windows.Forms.TabStripButton();
             this.FilterOrdered = new Messir.Windows.Forms.TabStripButton();
@@ -88,7 +88,7 @@
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.treeServers);
             this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(606, 717);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(606, 707);
             this.toolStripContainer1.Location = new System.Drawing.Point(18, 78);
             this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -105,14 +105,16 @@
             // 
             this.treeServers.AllowDrop = true;
             this.treeServers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeServers.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
             this.treeServers.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeServers.HideSelection = false;
+            this.treeServers.IsMultiSelect = true;
             this.treeServers.LineColor = System.Drawing.Color.SkyBlue;
             this.treeServers.Location = new System.Drawing.Point(0, 0);
             this.treeServers.Margin = new System.Windows.Forms.Padding(4);
             this.treeServers.Name = "treeServers";
             this.treeServers.ShowNodeToolTips = true;
-            this.treeServers.Size = new System.Drawing.Size(606, 717);
+            this.treeServers.Size = new System.Drawing.Size(606, 707);
             this.treeServers.TabIndex = 0;
             this.treeServers.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeServers_AfterLabelEdit);
             this.treeServers.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeServers_AfterCollapse);
@@ -142,7 +144,7 @@
             this.tabStrip1.Name = "tabStrip1";
             this.tabStrip1.RenderStyle = System.Windows.Forms.ToolStripRenderMode.System;
             this.tabStrip1.SelectedTab = this.FilterFavorites;
-            this.tabStrip1.Size = new System.Drawing.Size(242, 28);
+            this.tabStrip1.Size = new System.Drawing.Size(242, 38);
             this.tabStrip1.TabIndex = 0;
             this.tabStrip1.UseVisualStyles = false;
             // 
@@ -634,7 +636,6 @@
         private Messir.Windows.Forms.TabStripButton FilterGrouped;
         private Messir.Windows.Forms.TabStripButton FilterOrdered;
         private Messir.Windows.Forms.TabStripButton FilterFavorites;
-        private System.Windows.Forms.TreeView treeServers;
         private XwMaxLib.UI.DialogHeader dialogHeader1;
         private System.Windows.Forms.ContextMenuStrip contextGroup;
         private System.Windows.Forms.ToolStripMenuItem addGroupToolStripMenuItem;
@@ -662,5 +663,6 @@
         private System.Windows.Forms.ToolStripMenuItem ExportServer;
         private System.Windows.Forms.TextBox textSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Misc.GTreeView treeServers;
     }
 }

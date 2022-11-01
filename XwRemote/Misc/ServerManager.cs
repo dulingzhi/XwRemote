@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using XwMaxLib.Extensions;
 using XwRemote.Misc;
@@ -10,7 +12,7 @@ namespace XwRemote
     public partial class ServerManager : Form
     {
         private int SelectedTab = 1;
-        public Server ConnectToThisServer = null;
+        public List<Server> ConnectToThisServer = new List<Server>();
         private Main mainForm = null;
         private string tmpSelectedNode = null;
         private string tmpSelectedLabel;
@@ -220,12 +222,16 @@ namespace XwRemote
         //*************************************************************************************************************
         private void Connect_Click(object sender, EventArgs e)
         {
-            if (treeServers.SelectedNode?.Tag is Server)
+            ConnectToThisServer.Clear();
+            foreach (var node in treeServers.SelectedNodeList)
             {
-                DialogResult = System.Windows.Forms.DialogResult.OK;
-                ConnectToThisServer = ((Server)treeServers.SelectedNode.Tag);
-                Close();
+                if (node.Tag is Server tag)
+                {
+                    DialogResult = System.Windows.Forms.DialogResult.OK;
+                    ConnectToThisServer.Add(tag);
+                }
             }
+            Close();
         }
 
         //*************************************************************************************************************

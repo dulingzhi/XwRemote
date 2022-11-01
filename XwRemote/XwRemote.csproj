@@ -112,6 +112,9 @@
     <Compile Include="Misc\AskPassword.Designer.cs">
       <DependentUpon>AskPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Misc\GTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Misc\InOut.cs">
       <SubType>Form</SubType>
     </Compile>
